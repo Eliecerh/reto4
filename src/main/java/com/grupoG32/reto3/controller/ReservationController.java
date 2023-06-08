@@ -2,6 +2,7 @@ package com.grupoG32.reto3.controller;
 
 import com.grupoG32.reto3.dbo.ReservationDbo;
 import com.grupoG32.reto3.model.AdminModel;
+import com.grupoG32.reto3.model.GamaModel;
 import com.grupoG32.reto3.model.ReservationModel;
 import com.grupoG32.reto3.service.AdminService;
 import com.grupoG32.reto3.service.ReservationService;
@@ -25,5 +26,13 @@ public class ReservationController {
     @ResponseStatus(HttpStatus.CREATED)
     public void crear(@RequestBody ReservationModel reservation){
         reservationService.crear(reservation);
+    }
+    @DeleteMapping("/{id}")
+    public void eliminar(@PathVariable int id){
+        reservationService.eliminar(id);
+    }
+    @PutMapping("/update")
+    public void actualizar(@RequestBody ReservationModel reservationInput){
+        reservationService.actualizar(reservationInput);
     }
 }

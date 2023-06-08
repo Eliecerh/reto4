@@ -2,6 +2,7 @@ package com.grupoG32.reto3.controller;
 
 import com.grupoG32.reto3.dbo.ScoreDbo;
 import com.grupoG32.reto3.model.AdminModel;
+import com.grupoG32.reto3.model.GamaModel;
 import com.grupoG32.reto3.model.ScoreModel;
 import com.grupoG32.reto3.service.AdminService;
 import com.grupoG32.reto3.service.ScoreService;
@@ -23,5 +24,13 @@ public class ScoreController {
     @PostMapping("/save")
     public void crear(@RequestBody ScoreModel score){
         scoreService.crear(score);
+    }
+    @DeleteMapping("/{id}")
+    public void eliminar(@PathVariable int id){
+        scoreService.eliminar(id);
+    }
+    @PutMapping("/update")
+    public void actualizar(@RequestBody ScoreModel scoreInput){
+        scoreService.actualizar(scoreInput);
     }
 }

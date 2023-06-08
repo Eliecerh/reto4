@@ -26,7 +26,7 @@ public class ClientModel {
     @Column(length = 250)
     private String name;
     @Column(length = 3)
-    private byte age;
+    private Byte age;
 
     @OneToMany(cascade = CascadeType.MERGE, mappedBy = "client")
 

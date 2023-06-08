@@ -2,6 +2,7 @@ package com.grupoG32.reto3.controller;
 
 import com.grupoG32.reto3.dbo.GamaDbo;
 import com.grupoG32.reto3.model.AdminModel;
+import com.grupoG32.reto3.model.ClientModel;
 import com.grupoG32.reto3.model.GamaModel;
 import com.grupoG32.reto3.service.AdminService;
 import com.grupoG32.reto3.service.GamaService;
@@ -25,5 +26,13 @@ public class GamaController {
     @ResponseStatus(HttpStatus.CREATED)
     public void crear(@RequestBody GamaModel gama){
      gamaService.crear(gama);
+    }
+    @DeleteMapping("/{id}")
+    public void eliminar(@PathVariable int id){
+        gamaService.eliminar(id);
+    }
+    @PutMapping("/update")
+    public void actualizar(@RequestBody GamaModel modelInput){
+        gamaService.actualizar(modelInput);
     }
 }

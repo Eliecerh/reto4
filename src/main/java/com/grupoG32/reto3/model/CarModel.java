@@ -23,7 +23,7 @@ public class CarModel {
     @Column(length = 45)
     private String brand;
     @Column(name = "yyear", length = 4)
-    private int year;
+    private Integer year;
     @Column(length = 250)
     private String description;
 

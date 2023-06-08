@@ -2,6 +2,7 @@ package com.grupoG32.reto3.controller;
 
 import com.grupoG32.reto3.dbo.ClientDbo;
 import com.grupoG32.reto3.model.AdminModel;
+import com.grupoG32.reto3.model.CarModel;
 import com.grupoG32.reto3.model.ClientModel;
 import com.grupoG32.reto3.service.AdminService;
 import com.grupoG32.reto3.service.ClientService;
@@ -27,5 +28,13 @@ public class ClientController {
     public void crear(@RequestBody ClientModel client){
         //return adminService.crearAdministradores(adminModel);
         clientService.crear(client);
+    }
+    @DeleteMapping("/{id}")
+    public void eliminar(@PathVariable int id){
+        clientService.eliminar(id);
+    }
+    @PutMapping("/update")
+    public void actualizar(@RequestBody ClientModel clientInput){
+        clientService.actualizar(clientInput);
     }
 }

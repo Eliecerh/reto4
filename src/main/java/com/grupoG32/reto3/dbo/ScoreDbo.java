@@ -8,11 +8,11 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 
 
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
 public class ScoreDbo {
-    private int idScore;
-    private float value;
-    private ReservationModel reservation;
+    private Integer idScore;
+    private Integer stars;
 
 }

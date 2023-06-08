@@ -30,7 +30,7 @@ public class ScoreController {
         scoreService.eliminar(id);
     }
     @PutMapping("/update")
-    public void actualizar(@RequestBody ScoreModel scoreInput){
+    public void actualizar(@RequestBody ScoreDbo scoreInput){
         scoreService.actualizar(scoreInput);
     }
 }

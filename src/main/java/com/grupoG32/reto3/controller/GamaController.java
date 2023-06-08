@@ -32,7 +32,7 @@ public class GamaController {
         gamaService.eliminar(id);
     }
     @PutMapping("/update")
-    public void actualizar(@RequestBody GamaModel modelInput){
+    public void actualizar(@RequestBody GamaDbo modelInput){
         gamaService.actualizar(modelInput);
     }
 }

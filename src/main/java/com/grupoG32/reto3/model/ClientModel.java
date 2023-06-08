@@ -17,7 +17,7 @@ public class ClientModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_client")
-    private int idClient;
+    private Integer idClient;
 
     @Column(length = 45)
     private String email;

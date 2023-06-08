@@ -33,7 +33,7 @@ public class MessageController {
     }
 
     @PutMapping("/update")
-    public void actualizar(@RequestBody MessageModel messageInput){
+    public void actualizar(@RequestBody MessageDbo messageInput){
         messageService.actualizar(messageInput);
     }
 }

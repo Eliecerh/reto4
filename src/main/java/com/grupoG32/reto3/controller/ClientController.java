@@ -34,7 +34,7 @@ public class ClientController {
         clientService.eliminar(id);
     }
     @PutMapping("/update")
-    public void actualizar(@RequestBody ClientModel clientInput){
+    public void actualizar(@RequestBody ClientDbo clientInput){
         clientService.actualizar(clientInput);
     }
 }

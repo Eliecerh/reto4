@@ -1,5 +1,6 @@
 package com.grupoG32.reto3.service;
 
+import com.grupoG32.reto3.dbo.ScoreDbo;
 import com.grupoG32.reto3.model.ScoreModel;
 import com.grupoG32.reto3.repository.ScoreRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,7 +24,7 @@ public class ScoreService {
     public void eliminar(int id){
         scoreRepository.deleteById(id);
     }
-    public void actualizar(ScoreModel scoreInput){
+    public void actualizar(ScoreDbo scoreInput){
         Optional<ScoreModel> scoreDB = scoreRepository.findById(scoreInput.getIdScore());
 
         if(scoreDB.isPresent()){

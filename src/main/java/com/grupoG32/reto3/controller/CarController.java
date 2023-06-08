@@ -32,7 +32,7 @@ public class CarController {
     }
 
     @PutMapping("/update")
-    public void actualizar(@RequestBody CarModel carInput){
+    public void actualizar(@RequestBody CarDbo carInput){
         carService.actualizar(carInput);
     }
 }

@@ -17,7 +17,7 @@ public class ReservationModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_reservation")
-    private int idReservation;
+    private Integer idReservation;
     @Column(name = "start_date")
     private Date startDate;
     @Column(name = "devolution_date")

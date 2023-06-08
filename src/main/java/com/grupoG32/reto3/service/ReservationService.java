@@ -1,5 +1,6 @@
 package com.grupoG32.reto3.service;
 
+import com.grupoG32.reto3.dbo.ReservationDbo;
 import com.grupoG32.reto3.model.ReservationModel;
 import com.grupoG32.reto3.repository.ReservationRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,7 +24,7 @@ public class ReservationService {
     public void eliminar(int id){
         reservationRepository.deleteById(id);
     }
-    public void actualizar(ReservationModel reservationInput){
+    public void actualizar(ReservationDbo reservationInput){
         Optional<ReservationModel> reservationDB = reservationRepository.findById(reservationInput.getIdReservation());
 
         if(reservationDB.isPresent()){

@@ -1,5 +1,6 @@
 package com.grupoG32.reto3.service;
 
+import com.grupoG32.reto3.dbo.MessageDbo;
 import com.grupoG32.reto3.model.MessageModel;
 import com.grupoG32.reto3.repository.MessageRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,7 +24,7 @@ public class MessageService {
     public void eliminar(int id){
         messageRepository.deleteById(id);
     }
-    public void actualizar(MessageModel messageInput){
+    public void actualizar(MessageDbo messageInput){
         Optional<MessageModel> messageDB = messageRepository.findById(messageInput.getIdMessage());
 
         if(messageDB.isPresent()){
